@@ -3,7 +3,7 @@ import morgan from "morgan";
 import createError from "http-errors";
 import logger from "loglevel";
 
-logger.setLevel(logger.levels.DEBUG);
+logger.setLevel(logger.levels.WARN);
 
 const host = "localhost";
 const port = 8000;
