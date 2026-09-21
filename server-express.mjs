@@ -10,7 +10,7 @@ app.get(["/", "/index.html"], async function (request, response, next) {
   response.sendFile("index.html", { root: "./" });
 });
 
-app.get("/random/:nb", async function (request, response, next) {
+app.get(response.render("random", {numbers, welcome}), async function (request, response, next) {
   const length = request.params.nb;
   const contents = Array.from({ length })
     .map((_) => `<li>${Math.floor(100 * Math.random())}</li>`)
@@ -27,3 +27,4 @@ server.on("listening", () =>
 );
 
 console.info(`File ${import.meta.url} executed.`);
+pp.set("view engine", "ejs");
