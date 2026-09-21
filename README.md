@@ -88,3 +88,14 @@ Entête des reponses d'express qui se sont rajouté :
 
 ### Question 2.4
 L'évenement listening est déclenché, dès que j'ai fait les modification dans le fichier server-express.mjs et sauvegardé.
+
+### Question 2.5
+L'option est index. Elle est activée par défaut avec la valeur "index.html".
+Le middleware express.static("static") sert automatiquement le fichier index.html quand on demande le dossier racine /, c'est-à-dire qu'il fait une correspondance automatique entre l'URL "/" et le fichier "static/index.html".
+
+### Question 2.6
+- refresh normal sur style.css → 304 Not Modified : le navigateur utilise son cache
+- refresh forcé sur style.css → 200 OK : le navigateur ignore le cache et retélécharge tout
+
+### Question 2.7
+Oui l'affichage change entre le mode prod et dev. Avec le mode dev on a toute les trace des erreurs
